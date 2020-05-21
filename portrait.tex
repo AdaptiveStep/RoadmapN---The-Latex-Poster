@@ -1,0 +1,61 @@
+\documentclass{uioposter}
+
+%Justerar blocken lite bara.
+\addtobeamertemplate{block begin}{%
+  \setlength{\textwidth}{0.5\textwidth}%
+}{}
+
+\addtobeamertemplate{block alerted begin}{%
+  \setlength{\textwidth}{0.5\textwidth}%
+}{}
+
+\addtobeamertemplate{block example begin}{%
+  \setlength{\textwidth}{0.5\textwidth}%
+}{}
+
+\usepackage{etoolbox}
+\AtBeginEnvironment{minted}{
+    \fontsize{30}{30}}
+%%%%%%%%%%%%%%%%% KOD PARSER %%%%%%%
+\usepackage{lstautogobble} %TAr bort whitelines i kod.
+\usepackage{subfiles} %Nested TEX files
+\usepackage{multicol}
+\setlength{\columnsep}{5cm}
+\usepackage[figwidth = 0.98\linewidth]{todonotes}  % Dummy image (and more!)
+\usepackage[absolute, overlay]{textpos}            % Figure placement
+\setlength{\TPHorizModule}{\paperwidth}
+\setlength{\TPVertModule}{\paperheight}
+
+\title{Roadmap 1}
+\institute
+{
+    \ExecuteMetaData[Summary]{subsubtitle}
+}
+
+
+\newcounter{BlockCounter}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% Document begins %%%%%%%%%%%%
+\begin{document}
+\begin{frame}[allowframebreaks,fragile]
+
+\begin{multicols}{2}
+    \ExecuteMetaData[Summary]{boxes}
+\end{multicols}
+
+\begin{textblock}{1}(0.14, 0.925)
+\begin{multicols}{2}[]
+    \begin{minted}[escapeinside=||,mathescape=true,breaklines]{csharp}
+      static void Main(string[] args) {
+         Thread th = Thread.CurrentThread;
+         th.Name = "MainThread";   //Går att ge trådar namn
+
+         Console.WriteLine("Detta är {0}", th.Name);
+         Console.ReadKey();
+    \end{minted}
+\end{multicols}
+\end{textblock}
+\end{frame}
+
+\end{document}

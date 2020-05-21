@@ -1,0 +1,50 @@
+%ÄR BASERAT PÅ DENNA MALL:
+% https://www.overleaf.com/latex/templates/uioposter/tsmrpnztthrr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%Hur gör man block? Se exempel nedan.
+%%%%%%%%%%%%%%%%%%%%
+%                   Svart
+%    \begin{blackblock}{Does it come in black?}
+%        Sure, use an \textbf{exampleblock}!
+%    \end{exampleblock}
+
+%                   Röd
+%    \begin{redblock}{How do you make it red?}
+%        Use an \alert{alertblock}!
+%    \end{alertblock}
+
+%              VANLIGT BLOCK
+%    \begin{block}{Method}
+%        \lipsum[1]
+%    \end{block}
+%%%%%%%%%%%%%%%%%%%
+
+%Om du vill justera blocken, använd desssa i documentklassen:
+
+%Om man vill justera blocken.
+%\setlength{\marginparwidth}{100cm}
+%\setlength{\textwidth}{0.9\textwidth}
+%\setlength{\oddsidemargin}{10cm}
+%\setlength{\topmargin}{-2.5pc}
+%\setlength{\headsep}{10cm}
+%\setlength{\parskip}{10cm plus 100cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%om du vill bädda in filer gör som nedan
+% \attachfile[icon=Paperclip]{Embeds/TonyMerSpec.pdf}
+
+
+%%% GRabba/catcha en filklump
+%\CatchFileBetweenTags\temptoken{Summary}{cutecode} %
+%\setbox0=\vbox{\the\temptoken }%  skip part1
+
+% - eller
+%\ExecuteMetaData[Summary]{cutecode}
+
+
+%% Remove footline:
+%\setbeamertemplate{footline}{}
+%\setbeamertemplate{}{}
